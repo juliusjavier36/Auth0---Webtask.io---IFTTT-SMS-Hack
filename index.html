@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://use.typekit.net/iws6ohy.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome from BootstrapCDN -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+        <script src="auth0-variables.js"> </script>
+        <link href="app.css" rel="stylesheet">
+    </head>
+
+    <body class="home" onload="checkUserStatus();"> <!-- Check if user status if logged in or not -->
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Auth0 Hack</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><img id="profilePic" src="" class="img-thumbnail" style="display:none;" width="50" height="50"/> </li>
+              <li><a id="btn-login" href="#" style="display:inline;"><span style="margin-top:10px" class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <li><a id="btn-logOut" href="#" style="display:none;" onclick="logOut();"><span style="margin-top:10px" class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          </ul>
+        </div>
+      </nav>
+<!-- <button id="test" class="test" onclick="notify();">TEST</button> --> <!-- Use button to test notify function -->
+      <div class="container">
+          <div class="login-page clearfix">
+            <div id="welcome" class="inner" style="display:none;">
+              <h2>Welcome! <span id="nick" class="nickname"></span></h2>
+            </div>
+          </div>
+      </div>
+        <script src="app.js"></script>
+    </body>
+</html>
